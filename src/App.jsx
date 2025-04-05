@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button } from "./components/ui/button";
 import { Card, CardContent } from "./components/ui/card";
 import SomaExercicio from "./components/SomaExercicio";
+import SubtracaoExercicio from "./components/SubtracaoExercicio";
+
 
 export default function App() {
   const [view, setView] = useState("home");
@@ -48,8 +50,8 @@ export default function App() {
           {/* Aqui entra o exercício específico */}
           {view === "soma" && <SomaExercicio />}
 
-          {/* Você pode colocar os outros exercícios aqui depois:
-              view === "subtração" && <SubtracaoExercicio /> etc. */}
+          {/* Você pode colocar os outros exercícios aqui depois:*/}
+            {view === "subtração" && <SubtracaoExercicio />} 
 
           <Button onClick={() => setView("home")}>Voltar</Button>
         </div>

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 
-
 export default function SomaExercicio() {
   const [num1, setNum1] = useState(gerarNumero());
   const [num2, setNum2] = useState(gerarNumero());
@@ -15,7 +14,7 @@ export default function SomaExercicio() {
   
 
   function verificarResposta() {
-    const correto = num1 + num2;
+    const correto = num1 - num2;
     setResultado(Number(resposta) === correto);
   }
 
@@ -29,7 +28,7 @@ export default function SomaExercicio() {
   return (
     <Card>
       <CardContent className="flex flex-col gap-4">
-        <h2 className="text-xl font-bold text-blue-700">Quanto é {num1} + {num2}?</h2>
+        <h2 className="text-xl font-bold text-blue-700">Quanto é {num1} - {num2}?</h2>
 
         <input
           type="number"
