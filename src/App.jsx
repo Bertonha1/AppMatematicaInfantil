@@ -4,13 +4,17 @@ import { Card, CardContent } from "./components/ui/card";
 import SomaExercicio from "./components/SomaExercicio";
 import SubtracaoExercicio from "./components/SubtracaoExercicio";
 
-
 export default function App() {
   const [view, setView] = useState("home");
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-100 to-pink-200 flex flex-col items-center justify-center p-4">
-      <h1 className="text-4xl font-bold text-purple-700 mb-6">Aprendendo Matemática!</h1>
+      <div className="min-w-44 max-w-48">
+        <img src={"../../public/logo.svg"} alt="logo"></img>
+      </div>
+      <h1 className="text-4xl font-bold text-purple-700 mb-6">
+        Aprendendo Matemática!
+      </h1>
 
       {view === "home" && (
         <div className="grid grid-cols-2 gap-4 w-full max-w-xl">
@@ -51,7 +55,7 @@ export default function App() {
           {view === "soma" && <SomaExercicio />}
 
           {/* Você pode colocar os outros exercícios aqui depois:*/}
-            {view === "subtração" && <SubtracaoExercicio />} 
+          {view === "subtração" && <SubtracaoExercicio />}
 
           <Button onClick={() => setView("home")}>Voltar</Button>
         </div>
