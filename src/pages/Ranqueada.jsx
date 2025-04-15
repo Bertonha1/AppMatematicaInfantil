@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import RanqueadaExercicio from "../components/RanqueadaExercicio";
+import { Button } from "../components/ui/button";
+import { Link } from "react-router-dom";
 const Ranqueada = () => {
   const [pontos, setPontos] = useState(0);
   const [tempoMedio, setTempoMedio] = useState(0);
@@ -16,6 +18,13 @@ const Ranqueada = () => {
 
       <div className="w-1/2">
         <RanqueadaExercicio></RanqueadaExercicio>
+      </div>
+      <div>
+        <Link title="Voltar para o menu principal" to={"/"}>
+          <Button variant="yellow" title="Voltar para o menu principal">
+            Voltar
+          </Button>
+        </Link>
       </div>
     </div>
   );
